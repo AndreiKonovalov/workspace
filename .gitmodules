@@ -1,0 +1,6 @@
+[submodule "repoAnalytics"]
+	path = repoAnalytics
+	url = git@github.com:AndreiKonovalov/analytics-service.git
+[submodule "repoNotification"]
+	path = repoNotification
+	url = git@github.com:AndreiKonovalov/notification-service.git
