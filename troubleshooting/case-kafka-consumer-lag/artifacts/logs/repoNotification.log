@@ -1,0 +1,14 @@
+2026-03-12T11:39:58.102Z INFO  [repoNotification] consumer started group=repo-notification-v1 topic=repo.events partitions=12
+2026-03-12T11:41:04.991Z INFO  [repoNotification] polled records=500 batch=1842 processing_time_ms_p95=420
+2026-03-12T11:42:11.113Z WARN  [repoNotification] downstream request slow endpoint=/provider/send provider=notifyx latency_ms=1820 status=200
+2026-03-12T11:42:31.227Z WARN  [repoNotification] downstream timeout endpoint=/provider/send provider=notifyx timeout_ms=3000 retry=1 event_id=evt-91a4
+2026-03-12T11:42:34.401Z WARN  [repoNotification] downstream timeout endpoint=/provider/send provider=notifyx timeout_ms=3000 retry=2 event_id=evt-91a4
+2026-03-12T11:42:39.744Z ERROR [repoNotification] failed to process message event_id=evt-91a4 cause=ProviderTimeout attempts=3 partition=7 offset=228189
+2026-03-12T11:43:02.016Z INFO  [repoNotification] polled records=500 batch=1843 processing_time_ms_p95=3950
+2026-03-12T11:43:22.872Z WARN  [repoNotification] rebalance started reason=member_joined generation=788
+2026-03-12T11:43:30.401Z INFO  [repoNotification] rebalance completed assigned_partitions=12 duration_ms=7529
+2026-03-12T11:44:16.982Z WARN  [repoNotification] downstream timeout endpoint=/provider/send provider=notifyx timeout_ms=3000 retry=1 event_id=evt-ab22
+2026-03-12T11:44:20.121Z WARN  [repoNotification] downstream timeout endpoint=/provider/send provider=notifyx timeout_ms=3000 retry=2 event_id=evt-ab22
+2026-03-12T11:44:23.392Z WARN  [repoNotification] downstream timeout endpoint=/provider/send provider=notifyx timeout_ms=3000 retry=3 event_id=evt-ab22
+2026-03-12T11:44:23.395Z ERROR [repoNotification] exceeded retry budget event_id=evt-ab22 policy=exponential_backoff dlq=false
+2026-03-12T11:44:58.173Z INFO  [repoNotification] polled records=500 batch=1844 processing_time_ms_p95=5210 lag_total=182340

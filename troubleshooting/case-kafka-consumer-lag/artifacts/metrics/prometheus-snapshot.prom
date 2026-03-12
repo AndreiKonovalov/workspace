@@ -1,0 +1,32 @@
+# HELP kafka_consumergroup_lag Sum of lag per consumer group
+# TYPE kafka_consumergroup_lag gauge
+kafka_consumergroup_lag{group="repo-notification-v1",topic="repo.events"} 12450
+kafka_consumergroup_lag{group="repo-notification-v1",topic="repo.events"} 48720
+kafka_consumergroup_lag{group="repo-notification-v1",topic="repo.events"} 102390
+kafka_consumergroup_lag{group="repo-notification-v1",topic="repo.events"} 182340
+
+# HELP repo_notification_processing_duration_ms Consumer message processing latency
+# TYPE repo_notification_processing_duration_ms summary
+repo_notification_processing_duration_ms{quantile="0.5"} 920
+repo_notification_processing_duration_ms{quantile="0.9"} 2710
+repo_notification_processing_duration_ms{quantile="0.95"} 5210
+repo_notification_processing_duration_ms{quantile="0.99"} 8120
+
+# HELP repo_notification_provider_latency_ms External provider latency
+# TYPE repo_notification_provider_latency_ms histogram
+repo_notification_provider_latency_ms_bucket{le="100"} 1832
+repo_notification_provider_latency_ms_bucket{le="500"} 3941
+repo_notification_provider_latency_ms_bucket{le="1000"} 5160
+repo_notification_provider_latency_ms_bucket{le="3000"} 7322
+repo_notification_provider_latency_ms_bucket{le="+Inf"} 9011
+repo_notification_provider_latency_ms_sum 1.93e+07
+repo_notification_provider_latency_ms_count 9011
+
+# HELP repo_analytics_producer_publish_ms Producer publish latency
+# TYPE repo_analytics_producer_publish_ms summary
+repo_analytics_producer_publish_ms{quantile="0.95"} 14
+repo_analytics_producer_publish_ms{quantile="0.99"} 19
+
+# HELP kafka_server_brokertopicmetrics_messagesin_total Broker ingress rate
+# TYPE kafka_server_brokertopicmetrics_messagesin_total counter
+kafka_server_brokertopicmetrics_messagesin_total{topic="repo.events"} 8.36e+06
